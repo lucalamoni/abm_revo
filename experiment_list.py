@@ -18,13 +18,13 @@ DF = {}
 
 
 exp = []
-for x in range(0,5):
+for x in range(0,2):
 	#execfile('RandomExcelSheets_LL_mod.py')
 	#for a in range(0,len(modelMod)):
 	for b in range(0,len(density)):
 		expNum = 'ExperimentN' + str(x) + str(density[b])
 		#DF[expNum] = [modelMod[a]]
-		MGS = math.sqrt(53/(density[b]*math.pi))
+		MGS = math.sqrt(33/(density[b]*math.pi))
 		FGS = MGS
 
 		exp.append((expNum, FGS, MGS))
