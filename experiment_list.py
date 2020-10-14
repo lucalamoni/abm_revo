@@ -23,6 +23,6 @@ for x in range(0,2):
 			exp.append((expNum, FGS, MGS, modelMod))
 
 if __name__ == '__main__':
-	pool = mp.Pool(processes=4)
+	pool = mp.Pool(processes=30)
 	pool.starmap(use_songModel, exp)
 	pool.close()
