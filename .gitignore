@@ -90,3 +90,6 @@ target/
 .mypy_cache/
 
 .tmp.*
+
+# matlab
+*.mat
