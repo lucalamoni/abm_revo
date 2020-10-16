@@ -337,8 +337,9 @@ class songModel(object):
                                 'song' : self.Agents[m].song,
                                 'matrix' : self.Agents[m].mat,
                                 #'singStates': self.Agents[m].singState,
-                                'CMscore':self.Agents[m].CMscore,
-                                'noveltyValues': self.Agents[m].noveltyValues} 
+                                'CMscore':self.Agents[m].CMscore
+                                #'noveltyValues': self.Agents[m].noveltyValues}
+                                }
 
                         self.DF['whalenumber_' + str(m)]['iter_' + str(n)] = data
         
@@ -352,8 +353,8 @@ class songModel(object):
                          'song' : self.Agents[m].song, 
                          'matrix' : self.Agents[m].mat, 
                          #'singStates': self.Agents[m].singState,
-                         'CMscore':self.Agents[m].CMscore,
-                         'noveltyValues': self.Agents[m].noveltyValues
+                         'CMscore':self.Agents[m].CMscore
+                         #'noveltyValues': self.Agents[m].noveltyValues
                           }  
 
                 self.DF['whalenumber_' + str(m)]['iter_' + str(n)] = data
