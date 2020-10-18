@@ -93,3 +93,6 @@ target/
 
 # matlab
 *.mat
+
+# zip
+*.zip
