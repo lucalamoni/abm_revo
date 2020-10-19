@@ -12,7 +12,7 @@ def use_songModel(filename, FGS, MGS, modelMode):
 
 modelMods = ['revolution']#,'weightedEditsD','weightedEditsN']
 
-densities = [1.0]
+densities = [0.1]
 exp = []
 for x in range(0,500):
 	for modelMod in modelMods:
