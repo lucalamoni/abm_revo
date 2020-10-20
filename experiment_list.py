@@ -12,17 +12,17 @@ def use_songModel(filename, FGS, MGS, modelMode):
 
 modelMods = ['revolution']#,'weightedEditsD','weightedEditsN']
 
-densities = [0.1]
+densities = [1]
 exp = []
-for x in range(0,500):
+for x in range(0,200):
 	for modelMod in modelMods:
 		for density in densities:
 			expNum = 'ExperimentN' + str(x) + str(density)
-			MGS = math.sqrt(55/(density*math.pi))
+			MGS = math.sqrt(255/(density*math.pi))
 			FGS = MGS
 			exp.append((expNum, FGS, MGS, modelMod))
 
 if __name__ == '__main__':
-	pool = mp.Pool(processes=48)
+	pool = mp.Pool(processes=64)
 	pool.starmap(use_songModel, exp)
 	pool.close()
