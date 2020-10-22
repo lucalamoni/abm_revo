@@ -214,14 +214,14 @@ class songModel(object):
                     #Here based on the agent's number, and the migration nummber, we switch its breeding ground
                     if a.name == 0 and numMig == 1:
                         a.Change_Breed(1000,4000)
-                    if a.name == 1 and numMig == 1:
-                        a.Change_Breed(1000,4000)
-                    if a.name == 2 and numMig == 1:
-                        a.Change_Breed(1000,4000)
-                    if a.name == 3 and numMig == 1:
-                        a.Change_Breed(1000,4000)
-                    if a.name == 4 and numMig == 1:
-                        a.Change_Breed(1000,4000)
+                    # if a.name == 1 and numMig == 1:
+                    #     a.Change_Breed(1000,4000)
+                    # if a.name == 2 and numMig == 1:
+                    #     a.Change_Breed(1000,4000)
+                    # if a.name == 3 and numMig == 1:
+                    #     a.Change_Breed(1000,4000)
+                    # if a.name == 4 and numMig == 1:
+                    #     a.Change_Breed(1000,4000)
 
 
 
@@ -245,14 +245,15 @@ class songModel(object):
                         #Here we make one agent switch feeding ground
                         if a.name == 0 and numMig == 0:
                             a.Change_Feed(150,0)
-                        if a.name == 1 and numMig == 0:
-                            a.Change_Feed(150,0)
-                        if a.name == 2 and numMig == 0:
-                            a.Change_Feed(150,0)
-                        if a.name == 3 and numMig == 0:
-                            a.Change_Feed(150,0)
-                        if a.name == 4 and numMig == 0:
-                            a.Change_Feed(150,0)
+                        # if a.name == 1 and numMig == 0:
+                        #     a.Change_Feed(150,0)
+                        # if a.name == 2 and numMig == 0:
+                        #     a.Change_Feed(150,0)
+                        # if a.name == 3 and numMig == 0:
+                        #     a.Change_Feed(150,0)
+                        # if a.name == 4 and numMig == 0:
+                        #     a.Change_Feed(150,0)
+                        
                         a.returnMigration(self.FGS)
                     
                     #Add noise to the agents trajectors

@@ -10,19 +10,19 @@ def use_songModel(filename, FGS, MGS, modelMode):
 	songModel(filename=filename, FGS=FGS, MGS=MGS, modelMode = modelMode)
 	return 1
 
-modelMods = ['revolution']#,'weightedEditsD','weightedEditsN']
+modelMods = ['revolution', 'novelty', 'distance']#,'weightedEditsD','weightedEditsN']
 
-densities = [1]
+densities = [1.0]
 exp = []
 for x in range(0,200):
 	for modelMod in modelMods:
 		for density in densities:
-			expNum = 'ExperimentN' + str(x) + str(density)
-			MGS = math.sqrt(255/(density*math.pi))
+			expNum = str(modelMod) + '_ExperimentN' + str(x) + '_' + str(density) + '_'
+			MGS = math.sqrt(51/(density*math.pi))
 			FGS = MGS
 			exp.append((expNum, FGS, MGS, modelMod))
 
 if __name__ == '__main__':
-	pool = mp.Pool(processes=64)
+	pool = mp.Pool(processes=48)
 	pool.starmap(use_songModel, exp)
 	pool.close()
