@@ -215,10 +215,9 @@ class songModel(object):
                     if a.name == 0 and numMig == 1:
                         a.Change_Breed(1000,4000)
                     if a.name == 1 and numMig == 1:
+                        a.Change_Breed(1000,4000)                        
+                    if a.name == 2 and numMig == 1:
                         a.Change_Breed(1000,4000)
-                        
-                    # if a.name == 2 and numMig == 1:
-                    #     a.Change_Breed(1000,4000)
                     # if a.name == 3 and numMig == 1:
                     #     a.Change_Breed(1000,4000)
                     # if a.name == 4 and numMig == 1:
@@ -248,8 +247,8 @@ class songModel(object):
                             a.Change_Feed(150,0)
                         if a.name == 1 and numMig == 0:
                             a.Change_Feed(150,0)
-                        # if a.name == 2 and numMig == 0:
-                        #     a.Change_Feed(150,0)
+                        if a.name == 2 and numMig == 0:
+                            a.Change_Feed(150,0)
                         # if a.name == 3 and numMig == 0:
                         #     a.Change_Feed(150,0)
                         # if a.name == 4 and numMig == 0:
