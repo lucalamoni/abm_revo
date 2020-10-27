@@ -216,6 +216,7 @@ class songModel(object):
                         a.Change_Breed(1000,4000)
                     if a.name == 1 and numMig == 1:
                         a.Change_Breed(1000,4000)
+                        
                     # if a.name == 2 and numMig == 1:
                     #     a.Change_Breed(1000,4000)
                     # if a.name == 3 and numMig == 1:

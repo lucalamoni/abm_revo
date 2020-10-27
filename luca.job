@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=Luca_ExpSec1_revo_2IAg_d_1        # Job name
+#SBATCH --job-name=Luca_ExpSec1_rev_2IAg_d_1        # Job name
 #SBATCH --output=job.%j.out      # Name of output file (%j expands to jobId)
 #SBATCH --cpus-per-task=48        # Schedule one core
 #SBATCH --time=23:50:00          # Run time (hh:mm:ss) - run for one hour max
