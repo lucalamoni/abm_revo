@@ -210,14 +210,14 @@ class songModel(object):
                 #if np.remainder(n,self.iSave)==0:
                     #print(str(100*float(n)/self.i), '%')
                 
-                for a in self.Agents:
-                    #Here based on the agent's number, and the migration nummber, we switch its breeding ground
-                    if a.name == 0 and numMig == 1:
-                        a.Change_Breed(1000,4000)
-                    if a.name == 1 and numMig == 1:
-                        a.Change_Breed(1000,4000)                        
-                    if a.name == 2 and numMig == 1:
-                        a.Change_Breed(1000,4000)
+                # for a in self.Agents:
+                #     #Here based on the agent's number, and the migration nummber, we switch its breeding ground
+                #     if a.name == 0 and numMig == 1:
+                #         a.Change_Breed(1000,4000)
+                #     if a.name == 1 and numMig == 1:
+                #         a.Change_Breed(1000,4000)                        
+                #     if a.name == 2 and numMig == 1:
+                #         a.Change_Breed(1000,4000)
                     # if a.name == 3 and numMig == 1:
                     #     a.Change_Breed(1000,4000)
                     # if a.name == 4 and numMig == 1:
@@ -249,6 +249,17 @@ class songModel(object):
                             a.Change_Feed(150,0)
                         if a.name == 2 and numMig == 0:
                             a.Change_Feed(150,0)
+
+                        # Added this to make the immigrant agents to go back to original feeding ground in the second migration
+
+                        if a.name == 0 and numMig == 1:
+                            a.Change_Feed(-150,0)
+                        if a.name == 1 and numMig == 1:
+                            a.Change_Feed(-150,0)
+                        if a.name == 2 and numMig == 1:
+                            a.Change_Feed(-150,0)
+
+
                         # if a.name == 3 and numMig == 0:
                         #     a.Change_Feed(150,0)
                         # if a.name == 4 and numMig == 0:
