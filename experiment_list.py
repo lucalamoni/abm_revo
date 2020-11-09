@@ -12,14 +12,14 @@ def use_songModel(filename, FGS, MGS, modelMode, memory_conservatism):
 
 modelMods = ['revolution'] #,'weightedEditsD','weightedEditsN']
 memory_conservatisms = [0.9]
-densities = [1.0]
+densities = [5.0]
 exp = []
 for x in range(0,200):
 	for modelMod in modelMods:
 		for memory_conservatism in memory_conservatisms:
 			for density in densities:
 				expNum = str(modelMod) + '_Sec2_ExperimentN' + str(x) + '_' + str(density) + '_memo_conserv_' + str(memory_conservatism) + '_'
-				MGS = math.sqrt(53/(density*math.pi))
+				MGS = math.sqrt(55/(density*math.pi))
 				FGS = MGS
 				exp.append((expNum, FGS, MGS, modelMod, memory_conservatism))
 
