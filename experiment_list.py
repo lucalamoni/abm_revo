@@ -4,7 +4,7 @@ import os
 import math
 import multiprocessing as mp
 
-from ABM_07112020_memo import songModel
+from ABM_07112020_sol1_random_LR_memory_and_CM_changed import songModel
 
 def use_songModel(filename, FGS, MGS, modelMode, memory_conservatism, n_of_immigrants):
 	songModel(filename=filename, FGS=FGS, MGS=MGS, modelMode = modelMode, memory_conservatism = memory_conservatism, n_of_immigrants = n_of_immigrants)
@@ -12,8 +12,8 @@ def use_songModel(filename, FGS, MGS, modelMode, memory_conservatism, n_of_immig
 
 modelMods = ['revolution'] #,'weightedEditsD','weightedEditsN']
 memory_conservatisms = [0.1,0.9]
-densities = [5.0]
-n_of_immigrants = [1,5,10]
+densities = [0.4]
+n_of_immigrants = [1]
 exp = []
 for x in range(0,100):
 	for modelMod in modelMods:
@@ -26,6 +26,6 @@ for x in range(0,100):
 					exp.append((expNum, FGS, MGS, modelMod, memory_conservatism, n_of_immigrant))
 
 if __name__ == '__main__':
-	pool = mp.Pool(processes=48)
+	pool = mp.Pool(processes=64)
 	pool.starmap(use_songModel, exp)
 	pool.close()
