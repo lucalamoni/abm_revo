@@ -36,6 +36,7 @@ import scipy.spatial as ssp
 import difflib as dl
 import operator
 import sys
+#import json
 
 ### Profiling
 #from pycallgraph import PyCallGraph
@@ -369,6 +370,9 @@ class songModel(object):
                 self.DF['whalenumber_' + str(m.name)]['iter_' + str(n)] = data
 
             sio.savemat(self.filename+ 'migrationNumber' + str(numMig) + '.mat', self.DF)
+            
+            #with open('data.json','w') as fp:
+                #json.dump(self.DF,fp,indent=4)
         
 #        for a in self.Agents:
 #            #Obsolete, originally used to track an agents location at the end of arun.
