@@ -20,7 +20,7 @@ for x in range(0,100):
 		for memory_conservatism in memory_conservatisms:
 			for n_of_immigrant in n_of_immigrants:
 				for density in densities:
-					expNum = str(modelMod) + '_ExperimentN' + str(x) + '_' + str(n_of_immigrant) + '_memo_conserv_' + str(memory_conservatism) + '_'
+					expNum = str(modelMod) + '_ExperimentN' + str(x) + '_den_' +str(density)+ '_imm_'+ str(n_of_immigrant) + '_memo_conserv_' + str(memory_conservatism) + '_'
 					MGS = math.sqrt((30+n_of_immigrant)/(density*math.pi))
 					FGS = MGS
 					exp.append((expNum, FGS, MGS, modelMod, memory_conservatism, n_of_immigrant))
