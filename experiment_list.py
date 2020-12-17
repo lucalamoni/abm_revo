@@ -12,7 +12,7 @@ def use_songModel(filename, FGS, MGS, modelMode, memory_conservatism, n_of_immig
 
 modelMods = ['revolution'] #,'weightedEditsD','weightedEditsN']
 memory_conservatisms = [0.1,0.5,0.9]
-densities = [3]
+densities = [0.1,1,5]
 n_of_immigrants = [1,5]
 exp = []
 for x in range(0,100):
