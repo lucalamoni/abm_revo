@@ -31,6 +31,6 @@ for x in range(0,n_simulations):
 					exp.append((expNum, FGS, MGS, modelMod, memory_conservatism, n_of_immigrant))
 
 if __name__ == '__main__':
-	pool = mp.Pool(processes=4)
+	pool = mp.Pool(processes=48)
 	pool.starmap(use_songModel, exp)
 	pool.close()
