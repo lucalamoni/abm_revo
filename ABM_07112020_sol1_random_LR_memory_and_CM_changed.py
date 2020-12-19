@@ -206,12 +206,12 @@ class songModel(object):
         
 
         self.choose_immigrants(self.n_of_immigrants,self.nw)
-        print(self.immigrants_id)
+        #print(self.immigrants_id)
 
 
         #This loop keeps track of what migration we are currently going through           
         for numMig in range(0,self.mRuns):
-            print('this is migration number', str(numMig))
+            #print('this is migration number', str(numMig))
             
 
             #This loop is the actual migration that the agents undergo
@@ -221,8 +221,8 @@ class songModel(object):
                 #print(self.boolSingMat)
                 #Calculates and prints what percentage of the model is complete every time data is logged
                 
-                if np.remainder(n,self.iSave)==0:
-                    print(str(100*float(n)/self.i), '%')
+                #if np.remainder(n,self.iSave)==0:
+                    #print(str(100*float(n)/self.i), '%')
                 
                 #for immigrant in self.immigrants_id:
                     #print(i)

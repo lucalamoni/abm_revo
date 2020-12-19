@@ -3,6 +3,7 @@ import io
 import os
 import math
 import multiprocessing as mp
+import itertools
 
 from ABM_07112020_sol1_random_LR_memory_and_CM_changed import songModel
 
@@ -14,8 +15,12 @@ modelMods = ['distance','revolution'] #,'weightedEditsD','weightedEditsN']
 memory_conservatisms = [0.1,0.5,0.9]
 densities = [0.001,0.1,1,5]
 n_of_immigrants = [1,5,10]
+
+n_combinations = list(itertools.product(modelMods, memory_conservatisms,densities,n_of_immigrants))
+n_simulations = len(n_combinations)*100
+
 exp = []
-for x in range(0,100):
+for x in range(0,n_simulations):
 	for modelMod in modelMods:
 		for memory_conservatism in memory_conservatisms:
 			for n_of_immigrant in n_of_immigrants:
@@ -26,6 +31,6 @@ for x in range(0,100):
 					exp.append((expNum, FGS, MGS, modelMod, memory_conservatism, n_of_immigrant))
 
 if __name__ == '__main__':
-	pool = mp.Pool(processes=48)
+	pool = mp.Pool(processes=4)
 	pool.starmap(use_songModel, exp)
 	pool.close()
