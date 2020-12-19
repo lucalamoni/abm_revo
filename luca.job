@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=testLR_CM        # Job name
+#SBATCH --job-name=testLL_CM        # Job name
 #SBATCH --output=job.%j.out      # Name of output file (%j expands to jobId)
 #SBATCH --cpus-per-task=48        # Schedule one core
 #SBATCH --time=48:00:00          # Run time (hh:mm:ss) - run for one hour max
