@@ -5,7 +5,7 @@ import math
 import multiprocessing as mp
 import itertools
 
-from ABM_16112020_sol1_random import songModel
+from ABM_07112020_sol1_random_LR_memory_and_CM_changed import songModel
 
 def use_songModel(filename, FGS, MGS, modelMode, memory_conservatism, n_of_immigrants):
 	songModel(filename=filename, FGS=FGS, MGS=MGS, modelMode = modelMode, memory_conservatism = memory_conservatism, n_of_immigrants = n_of_immigrants)
