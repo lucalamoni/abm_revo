@@ -52,15 +52,15 @@ class songModel(object):
                     width=1, #width of our starting arena
                     height=100, #height of our starting arena
                     i=8760, #number of iterations our model runs for [number of hours in 1 year]
-                    mRuns=1, #The number of return migrations our model will carry out
-                    iSave=500, #how often to record data
-                    MGS=3.3, #Mating ground size 
-                    FGS=3.3, #Feeding ground size 
+                    mRuns=2, #The number of return migrations our model will carry out
+                    iSave=1000, #how often to record data
+                    MGS=5, #Mating ground size 
+                    FGS=5, #Feeding ground size 
                     FeedingGrounds=np.array([0,0]), #The coordinates of the feeding grounds 
                     migrationTrigger=1, #Migration trigger 
                     returnTrigger=4380, #Controls what iteration the agents return to the breeding grounds
                     hearingThresh=1, #CutoffDistance - How far our agents can hear a song before they can move towards it. 
-                    probVec=np.array([ [0,0.08],[1300,0.7], [4380,0.5],[5700,0.08] ]), # Singing probabilities based on iteration number
+                    probVec=np.array([ [0,0.08],[1320,0.7], [4380,0.5],[5700,0.08] ]), # Singing probabilities based on iteration number
                     coinFlip=np.array([1,0]), #Controls the liklihood of a levenshtein distance edit being carried out
                     filename='runNumber_largeR', #Name of the matlab file to be outputby the model 
                     inputFile='testbook.xlsx', #Name of the input Excel file. 
@@ -314,7 +314,8 @@ class songModel(object):
                                 'matrix' : m.mat,
                                 #'singStates': self.Agents[m].singState,
                                 'CMscore':m.CMscore,
-                                'immigrants_id':self.immigrants_id
+                                'immigrants_id':self.immigrants_id,
+                                'nw':self.nw
                                 #'noveltyValues': self.Agents[m].noveltyValues}
                                 }
 
@@ -331,7 +332,8 @@ class songModel(object):
                          'matrix' : m.mat, 
                          #'singStates': self.Agents[m].singState,
                          'CMscore':m.CMscore,
-                         'immigrants_id':self.immigrants_id
+                         'immigrants_id':self.immigrants_id,
+                         'nw':self.nw
                          #'noveltyValues': self.Agents[m].noveltyValues
                           }  
 
