@@ -5,13 +5,13 @@ import math
 import multiprocessing as mp
 
 
-from ABM_16112020_sol1_random import songModel
+from ABM_31122020_sol1_random import songModel
 
 def use_songModel(filename, FGS, MGS, modelMode, memory_conservatism, n_of_immigrants):
 	songModel(filename=filename, FGS=FGS, MGS=MGS, modelMode = modelMode, memory_conservatism = memory_conservatism, n_of_immigrants = n_of_immigrants)
 	return 1
 
-modelMods = ['distance','revolution'] 
+modelMods = ['revolution'] 
 memory_conservatisms = [0.1,0.5,0.9]
 densities = [0.001,0.01,0.1,1,5]
 n_of_immigrants = [1,5,10]
@@ -30,6 +30,6 @@ for x in range(0,100):
 					exp.append((expNum, FGS, MGS, modelMod, memory_conservatism, n_of_immigrant))
 
 if __name__ == '__main__':
-	pool = mp.Pool(processes=48) # here you can change the number of cores
+	pool = mp.Pool(processes=64) # here you can change the number of cores
 	pool.starmap(use_songModel, exp)
 	pool.close()
