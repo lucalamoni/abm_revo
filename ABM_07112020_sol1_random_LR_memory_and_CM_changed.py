@@ -346,7 +346,8 @@ class songModel(object):
                                 'matrix' : m.mat,
                                 #'singStates': self.Agents[m].singState,
                                 'CMscore':m.CMscore,
-                                'immigrants_id':self.immigrants_id
+                                'immigrants_id':self.immigrants_id,
+                                'nw':self.nw
                                 #'noveltyValues': self.Agents[m].noveltyValues}
                                 }
 
@@ -363,7 +364,8 @@ class songModel(object):
                          'matrix' : m.mat, 
                          #'singStates': self.Agents[m].singState,
                          'CMscore':m.CMscore,
-                         'immigrants_id':self.immigrants_id
+                         'immigrants_id':self.immigrants_id,
+                         'nw':self.nw
                          #'noveltyValues': self.Agents[m].noveltyValues
                           }  
 
