@@ -760,7 +760,7 @@ class Agent(object):
         # When correlation between memory and last heard songs is high by this forumation CMscore is LOW and vice versa
 
         #Conformity MATCH calculation
-        self.CMscore = Change_Corr_Scale(corr2(self.mat, self.Memory_Mat))#**2  #DOES SQUARING MAKE ANY DIFFERENCE?
+        self.CMscore = Change_Corr_Scale(corr2(self.mat, self.Memory_Mat))**2  #DOES SQUARING MAKE ANY DIFFERENCE?
         # When correlation between memory and last heard songs is high by this forumation CMscore is also HIGH and vice versa
         
 
