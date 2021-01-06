@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#SBATCH --job-name=ABM_master2_CMsquared        # Job name
+#SBATCH --job-name=ABM_master_nov_rev_LR       # Job name
 #SBATCH --output=job.%j.out      # Name of output file (%j expands to jobId)
-#SBATCH --cpus-per-task=48        # Schedule one core
+#SBATCH --cpus-per-task=64        # Schedule one core
 #SBATCH --time=72:00:00          # Run time (hh:mm:ss) - run for one hour max
 #SBATCH --partition=red    # Run on either the Red or Brown queue
 
