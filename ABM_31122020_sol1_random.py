@@ -53,7 +53,7 @@ class songModel(object):
                     height=100, #height of our starting arena
                     i=8760, #number of iterations our model runs for [number of hours in 1 year]
                     mRuns=2, #The number of return migrations our model will carry out
-                    iSave=200, #how often to record data
+                    iSave=1000, #how often to record data
                     MGS=81, #Mating ground size 
                     FGS=81, #Feeding ground size 
                     FeedingGrounds=np.array([0,0]), #The coordinates of the feeding grounds 
@@ -700,8 +700,8 @@ class Agent(object):
                 self.Memory_Mat[z] = self.mat[z]
 
         #Conformity mismatch calculation
-        #self.CMscore = 1-(Change_Corr_Scale(corr2(self.mat, self.Memory_Mat))**2)
-        self.CMscore = Change_Corr_Scale(corr2(self.mat, self.Memory_Mat))
+        self.CMscore = 1-(Change_Corr_Scale(corr2(self.mat, self.Memory_Mat))**2)
+        #self.CMscore = Change_Corr_Scale(corr2(self.mat, self.Memory_Mat))
         return self.CMscore  
 
     #Song learning
